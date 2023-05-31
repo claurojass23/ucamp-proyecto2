@@ -58,6 +58,12 @@ form {
  width: 70%;
  padding-bottom: 100px;
 }
+
+#guardar{
+ background-color: rgba(105, 175, 240, 0.884);
+ border-radius: 5px;
+ padding: 5px;
+}
    
 hr{
  margin: 30px;
