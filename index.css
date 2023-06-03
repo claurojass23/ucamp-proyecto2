@@ -80,39 +80,25 @@ article h2{
     color: gold;
 }
    
-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 70px;
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    margin-left: 10px;
 }
 
-#inpuntcomment{
-    width: 500px;
-    height: 100px;
+fieldset{
+  padding-top: 40px;  
+ padding-left: 70px;
+ padding-right: 70px;
+ padding-bottom: 50px;
 }
 
-form div {
-    display: flex;
-    flex-direction: column;
-}
-
-#primerbtn{
-    padding: 10px;
-    background-color: rgba(24, 128, 128, 0.425);
-    font-size: 15px;
-}
-
-.div-comment{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-div h1{
-    font-size: 30px;
-    margin-top: 40px;
+.col-md-12{
+    padding-top: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
 }
 
 hr{

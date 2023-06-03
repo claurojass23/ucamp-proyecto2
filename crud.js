@@ -13,6 +13,3 @@ stars.forEach(function(star, index){
 })
 
 
-
-
-
