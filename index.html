@@ -27,7 +27,7 @@
       <a href=""><p>Inicio</p></a>
       <a href=""><p>Peliculas</p></a>
       <a href=""><p>Series</p></a>
-      <a href=""><p>Suscripción</p></a>
+      <a href=""><p>Registro</p></a>
     </div>
   </header>
 
@@ -55,24 +55,24 @@
       <div class="col-md-12">
         <form class="form-horizontal" id="form-edit-client">
           <fieldset>
-           <legend>Client</legend>
+           <legend>Datos</legend>
            <div class="form-group">
-              <label class="col-md-4 control-label" for="client-name">Name</label>  
+              <label class="col-md-4 control-label" for="client-name">Usuario</label>  
               <div class="col-md-4">
-                <input id="client-name" name="client-name" type="text" placeholder="your client's name" class="form-control input-md">
-                <span class="help-block">Full name of your customer</span>  
+                <input id="client-name" name="client-name" type="text" placeholder="Marcos_23" class="form-control input-md">
+                <span class="help-block">Nombre del usuario</span>  
               </div>
             </div>
      
             <!-- Prepended text-->
             <div class="form-group">
-              <label class="col-md-4 control-label" for="client-email">Email</label>
+              <label class="col-md-4 control-label" for="client-email">Correo</label>
               <div class="col-md-4">
                 <div class="input-group">
                   <span class="input-group-addon">@</span>
-                  <input id="client-email" name="client-email" class="form-control" placeholder="yourname@yourdomain.com" type="text">
+                  <input id="client-email" name="client-email" class="form-control" placeholder="marcos23@gmail.com" type="text">
                 </div>
-                <p class="help-block">Email of your client</p>
+                <p class="help-block">Correo con el que se registro</p>
               </div>
             </div>
           </fieldset>
@@ -80,20 +80,20 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="btn-save"></label>
             <div class="col-md-4" id="saveupdate">
-                <button id="btn-save" name="btn-save" class="btn btn-success" onclick="addClient()">Save</button>
+                <button id="btn-save" name="btn-save" class="btn btn-success" onclick="addClient()">Guardar</button>
              </div>
         </div>
       </div> 
         
       <!-- LIST -->
       <div class=col-md-12>
-        <legend>List of clients</legend>
+        <legend>Lista de usiarios</legend>
          <table class="table table-bordered table-condensed table-hover">
            <thead>
              <tr>
-               <td>Name</td>
-               <th>Email</th>
-               <th>Actions</th>
+               <td>Usuario</td>
+               <th>Correo</th>
+               <th>Acción</th>
              </tr>
           </thead>
           <tbody id="form-list-client-body">
@@ -110,7 +110,7 @@
 
 
    
-
+  <hr>
   <footer>
     <p>Proyecto No.2</p>
     <p>Claudia Cristina Rojas Salas</p>
