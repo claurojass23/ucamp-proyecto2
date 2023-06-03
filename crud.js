@@ -12,8 +12,14 @@ stars.forEach(function(star, index){
     })
 })
 
-const comentarioInput = document.getElementById("inpuntcomment");
-const lista = document.getElementById("comment");
+
+
+// the example that the teacher gave us
+
+console.log("Entro al main.js");
+
+const nombreInput = document.getElementById("nombreInput");
+const lista = document.getElementById("lista");
 let nombres = localStorage.getItem("nombres") ? JSON.parse(localStorage.getItem("nombres")) : [];
 let editando = false;
 let nombre_previo = "";
@@ -24,7 +30,7 @@ function agregarNombre() {
     if (editando) {
         console.log(nombre_previo);
         // Se esta usando un if ternario.
-        comentario= comentario.map(nombreIndividual => nombreIndividual === nombre_previo ? nombreInput.value : nombreIndividual);
+        nombres = nombres.map(nombreIndividual => nombreIndividual === nombre_previo ? nombreInput.value : nombreIndividual);
         localStorage.setItem("nombres", JSON.stringify(nombres));
         nombreInput.value = "";
         actualizarLista();
