@@ -20,6 +20,8 @@ let clients=[];
       name:document.getElementById("client-name").value,
       email:document.getElementById("client-email").value
     }
+
+    localStorage.setItem("newClient" , JSON.stringify(newClient));
     clients.push(newClient)
     displayClients()
   }
@@ -91,7 +93,7 @@ let clients=[];
     document.getElementById("saveupdate").innerHTML=""
     
     document.getElementById("saveupdate").appendChild(crbtn);
-    
+    localStorage.setItem("newClient" , JSON.stringify(newClient));
     displayClients()
   }
 
