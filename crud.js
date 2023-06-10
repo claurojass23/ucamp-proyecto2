@@ -25,7 +25,9 @@ let clients=[];
     clients.push(newClient);
     displayClients();
   }
-
+  
+  localStorage.setItem("newClient" , JSON.stringify(newClient));
+  
   function displayClients(){
     document.getElementById("form-list-client-body").innerHTML=""
     for (i=0;i<clients.length;i++){
@@ -85,6 +87,7 @@ let clients=[];
       name:document.getElementById("client-name").value,
       email:document.getElementById("client-email").value
     }
+    
     clients[myIndex]=updatedClient;
     let crbtn=document.createElement("button");
     crbtn.innerHTML="Guardar";
@@ -93,7 +96,6 @@ let clients=[];
     document.getElementById("saveupdate").innerHTML=""
     
     document.getElementById("saveupdate").appendChild(crbtn);
-    localStorage.setItem("newClient" , JSON.stringify(newClient));
     displayClients();
   }
 
