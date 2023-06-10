@@ -22,32 +22,32 @@ let clients=[];
     }
 
     localStorage.setItem("newClient" , JSON.stringify(newClient));
-    clients.push(newClient)
-    displayClients()
+    clients.push(newClient);
+    displayClients();
   }
 
   function displayClients(){
     document.getElementById("form-list-client-body").innerHTML=""
     for (i=0;i<clients.length;i++){
-      let myTr=document.createElement("tr")
+      let myTr=document.createElement("tr");
       for(a in clients[i]){
-        let mytd=document.createElement("td")
+        let mytd=document.createElement("td");
         mytd.innerHTML=clients[i][a]
-        myTr.appendChild(mytd)
+        myTr.appendChild(mytd);
       }
       
-      let actionTd=document.createElement("td")
-      let editBtn=document.createElement("button")
-      editBtn.setAttribute("class" , "btn btn-sm btn-primary")
-      editBtn.setAttribute("onclick" , "editClient("+i+")")
+      let actionTd=document.createElement("td");
+      let editBtn=document.createElement("button");
+      editBtn.setAttribute("class" , "btn btn-sm btn-primary");
+      editBtn.setAttribute("onclick" , "editClient("+i+")");
 
       const iconoEdit = document.createElement("i");
       iconoEdit.classList.add("fa", "fa-edit");
-      editBtn.appendChild(iconoEdit)
+      editBtn.appendChild(iconoEdit);
   
-      let deletebtn=document.createElement("button")
-      deletebtn.setAttribute("class" , "btn btn-sm btn-danger")
-      deletebtn.setAttribute("onclick" , "deleteClient("+i+")")
+      let deletebtn=document.createElement("button");
+      deletebtn.setAttribute("class" , "btn btn-sm btn-danger");
+      deletebtn.setAttribute("onclick" , "deleteClient("+i+")");
       
 
       const iconoBasura = document.createElement("i");
@@ -57,8 +57,8 @@ let clients=[];
 
       actionTd.appendChild(editBtn)
       actionTd.appendChild(deletebtn)
-      myTr.appendChild(actionTd)
-      document.getElementById("form-list-client-body").appendChild(myTr)
+      myTr.appendChild(actionTd);
+      document.getElementById("form-list-client-body").appendChild(myTr);
 
       }
       document.getElementById("client-name").value="";
@@ -67,12 +67,12 @@ let clients=[];
 
   
   function editClient(i){
-    console.log(clients[i])
+    console.log(clients[i]);
     myIndex=i;
     let updatebtn=document.createElement("button")
     updatebtn.innerHTML="Guardar cambio";
-    updatebtn.setAttribute("class", "btn btn-sm btn-success")
-    updatebtn.setAttribute("onclick","updClient()")
+    updatebtn.setAttribute("class", "btn btn-sm btn-success");
+    updatebtn.setAttribute("onclick","updClient()");
     document.getElementById("saveupdate").innerHTML=""
     document.getElementById("saveupdate").appendChild(updatebtn);
     document.getElementById("client-name").value=clients[i].name
@@ -86,21 +86,21 @@ let clients=[];
       email:document.getElementById("client-email").value
     }
     clients[myIndex]=updatedClient;
-    let crbtn=document.createElement("button")
+    let crbtn=document.createElement("button");
     crbtn.innerHTML="Guardar";
-    crbtn.setAttribute("onclick","addClient()")
-    crbtn.setAttribute("class","btn btn-sm btn-success")
+    crbtn.setAttribute("onclick","addClient()");
+    crbtn.setAttribute("class","btn btn-sm btn-success");
     document.getElementById("saveupdate").innerHTML=""
     
     document.getElementById("saveupdate").appendChild(crbtn);
     localStorage.setItem("newClient" , JSON.stringify(newClient));
-    displayClients()
+    displayClients();
   }
 
   
   function deleteClient(i){
-    clients.splice(i,1)
-    displayClients()
+    clients.splice(i,1);
+    displayClients();
   }
 
 
